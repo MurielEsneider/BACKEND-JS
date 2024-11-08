@@ -42,7 +42,7 @@ app.post('/login',async(req,res)=>{
 
 ////////PROTEGER RUTAS//////////
 
-/* const authenticateToken = (req, res, next) =>{
+const authenticateToken = (req, res, next) =>{
     const authHeader = req.headers['authorization'];
     const token = authHeader&&authHeader.split('')[1];
 
@@ -52,13 +52,13 @@ app.post('/login',async(req,res)=>{
         if(err) return res.stats(403).json({message: 'Token inválido'});
     });
 };
- */
+
 //////RUTA PROTEGIDA////////
 
-/* app.get('/protected', authenticateToken,(req, res)=>{
+ app.get('/protected', authenticateToken,(req, res)=>{
     res.json({message: 'Acceso autorizado', user: req.user});
 });
- */
+
 
 ////////INICIAR SERVIDOR/////////////
 
